@@ -1,0 +1,40 @@
+<section id="report">
+    <div class="container report_contents">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                Data Archive
+            </div>
+            <div class="panel-body report_body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th> 
+                            <th>Email</th> 
+                            <th>Phone</th> 
+                            <th>Street</th> 
+                            <th>City</th> 
+                            <th>State</th> 
+                            <th>Zip</th> 
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="customer in customers" item="customer">
+                        <tr>
+                            <td>{{customer.id}}</td>
+                            <td>{{customer.name}}</td>
+                            <td>{{customer.email}}</td>
+                            <td>{{customer.phone}}</td>
+                            <td>{{customer.street}}</td>
+                            <td>{{customer.city}}</td>
+                            <td>{{customer.state}}</td>
+                            <td>{{customer.zip}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel-footer">
+                
+            </div>
+        </div>
+    </div>
+</section>

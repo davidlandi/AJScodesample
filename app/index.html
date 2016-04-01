@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>David Landi</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="css/djlCustom.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid nav_width">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nd_collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand navbarLogo" href="#">Customer Data</a>
+        </div>
+        <div class="collapse navbar-collapse" id="nd_collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/mainMenu"><i class="fa fa-home"></i></a></li>
+                <li><a href="#/addCustomer"><i class="fa fa-user-plus"></i></a></li>
+                <li><a href="#/modifyCustomer"><i class="fa fa-user-times"></i></a></li>
+                <li><a href="#/report"><i class="fa fa-bar-chart"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <div ng-view></div>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="mainMenu/mainMenu.js"></script>
+  <script src="addCustomer/addCustomer.js"></script>
+  <script src="modifyCustomer/modifyCustomer.js"></script>
+  <script src="report/report.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

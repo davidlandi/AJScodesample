@@ -1,0 +1,59 @@
+<section id="addCustomer" class="">
+    <div class="container add_customer_content">
+        <div class="panel panel-info pnl_add_customer">
+            <div class="panel-heading">
+                New Customer
+            </div>
+            <div class="panel-body">
+
+                <form class="form-horizontal" role="form">
+                    <label for="txtName" class="frm_input_space">Name</label>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                        <input ng-model="txtName" type="text" class="form-control" placeholder="Ex: David Landi" aria-describedby="basic-addon1">
+                    </div>
+
+                    <label for="txtEmail" class="frm_input_space">Email</label>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon2"><i class="fa fa-paper-plane-o"></i></span>
+                            <input ng-model="txtEmail" type="text" class="form-control" placeholder="Ex: djlandi@email.neit.edu" aria-describedby="basic-addon2">
+                    </div>
+
+                    <label for="txtPhone" class="frm_input_space">Phone</label>
+                    <div class="input-group">
+
+                        <span class="input-group-addon" id="basic-addon3"><i class="fa fa-mobile"></i></span>
+                            <input ng-model="txtPhone" type="text" class="form-control" placeholder="Ex: 401-206-2733" aria-describedby="basic-addon3">
+                    </div>
+
+                    <label for="txtStreet" class="frm_input_space">Street</label>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon4"><i class="fa fa-map-marker"></i></span>
+                        <input ng-model="txtStreet" type="text" class="form-control" placeholder="Ex: 139 Chandler Ave" aria-describedby="basic-addon4">
+                    </div>
+
+                    <label for="txtCity" class="frm_input_space">City</label>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon5"><i class="fa fa-map-marker"></i></span>
+                            <input ng-model="txtCity" type="text" class="form-control" placeholder="Ex: Cranston" aria-describedby="basic-addon5">
+                    </div>
+
+                    <label for="txtState" class="frm_input_space">State</label>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon6"><i class="fa fa-map-marker"></i></span>
+                        <input ng-model="txtState" type="text" class="form-control" placeholder="Ex: RI" aria-describedby="basic-addon6">
+                    </div>
+
+                    <label for="txtZip" class="frm_input_space">Zip</label>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon7"><i class="fa fa-map-marker"></i></span>
+                        <input ng-model="txtZip" type="text" class="form-control" placeholder="Ex: 02910 " aria-describedby="basic-addon7">
+                    </div>
+                </form>
+            </div>
+            <div class="panel-footer">
+                <button type="button" ng-click="addCustomer()" class="btn btn-success">Add New Customer</button>
+            </div>
+        </div>
+    </div>
+</section>

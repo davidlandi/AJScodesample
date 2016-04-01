@@ -1,0 +1,104 @@
+
+<!--
+Developed by: David Landi | Copyright 2016, all rights reserved
+Purpose:
+Usage:
+-->
+<section id="modifyCustomer">
+    <div class="container-fluid modify_customer_Content">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Customers
+                    </div>
+                    <div class="panel-body cust_list">
+                        <ul ng-repeat="customer in customers" item="customer" class="npad">
+                            <li><strong>{{customer.name}}</strong> 
+                                <button ng-click="deleteCustomer($index, customer)" class="btn btn-danger btn-sm" type="button"><i class="fa fa-times"></i></button> 
+                                <button ng-click="editCustomer(customer)" type="button" class="btn btn-primary btn-sm"> <i class="fa fa-pencil-square-o"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="panel panel-primary pnl_edit">
+                    <div class="panel-heading">
+                        Edit Customer
+                    </div>
+                    <div class="panel-body">
+                        <form name="editForm" class="form-horizontal" role="form">
+                        <label for="txtID" class="frm_input_space">ID</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon"><i class="fa fa-user"></i></span>
+                            <input ng-model="txtID" type="text" id="txtID" class="form-control" aria-describedby="basic-addon" disabled>
+                            
+                        </div>
+                        
+                        <label for="txtName" class="frm_input_space">Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                            <input name="txtName" ng-model="txtName" type="text" class="form-control" aria-describedby="basic-addon1" required>
+                            <span class="form-control-feedback error_color" ng-show="editForm.txtName.$touched && editForm.txtName.$invalid"><i class="fa fa-times"></i></span>
+                            
+                        </div>
+
+                        <label for="txtEmail" class="frm_input_space">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon2"><i class="fa fa-paper-plane-o"></i></span>
+                                <input name="txtEmail" ng-model="txtEmail" type="text" class="form-control" aria-describedby="basic-addon2" required>
+                            <span class="form-control-feedback error_color" ng-show="editForm.txtEmail.$touched && editForm.txtEmail.$invalid"><i class="fa fa-times"></i></span>
+                        </div>
+
+                        <label for="txtPhone" class="frm_input_space">Phone</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon3"><i class="fa fa-mobile"></i></span>
+                                <input name="txtPhone" ng-model="txtPhone" type="text" class="form-control" aria-describedby="basic-addon3" required>
+                            <span class="form-control-feedback error_color" ng-show="editForm.txtPhone.$touched && editForm.txtPhone.$invalid"><i class="fa fa-times"></i></span>
+                        </div>
+
+                        <label for="txtStreet" class="frm_input_space">Street</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon4"><i class="fa fa-map-marker"></i></span>
+                            <input name="txtStreet" ng-model="txtStreet" type="text" class="form-control" aria-describedby="basic-addon4" required>
+                            <span class="form-control-feedback error_color" ng-show="editForm.txtStreet.$touched && editForm.txtStreet.$invalid"><i class="fa fa-times"></i></span>
+                        </div>
+
+                        <label for="txtCity" class="frm_input_space">City</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon5"><i class="fa fa-map-marker"></i></span>
+                                <input name="txtCity" ng-model="txtCity" type="text" class="form-control" aria-describedby="basic-addon5" required>
+                                <span class="form-control-feedback error_color" ng-show="editForm.txtCity.$touched && editForm.txtCity.$invalid"><i class="fa fa-times"></i></span>
+                        </div>
+
+                        <label for="txtState" class="frm_input_space">State</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon6"><i class="fa fa-map-marker"></i></span>
+                            <input name="txtState" ng-model="txtState" type="text" class="form-control" aria-describedby="basic-addon6" required>
+                            <span class="form-control-feedback error_color" ng-show="editForm.txtState.$touched && editForm.txtState.$invalid"><i class="fa fa-times"></i></span>
+                        </div>
+
+                        <label for="txtZip" class="frm_input_space">Zip</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon7"><i class="fa fa-map-marker"></i></span>
+                            <input name="txtZip" ng-model="txtZip" type="text" class="form-control" aria-describedby="basic-addon7" required>
+                            <span class="form-control-feedback error_color" ng-show="editForm.txtZip.$touched && editForm.txtZip.$invalid"><i class="fa fa-times"></i></span>
+                        </div>
+                    </form>
+                    </div>
+                    <div class="panel-footer">
+                        <span class="pull-right">
+                            <button ng-click="updateCustomerData(customer)" type="button" class="btn btn-success">Update</button>
+                        </span>
+                        <span class="clearfix"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
